@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+$(document).ready(function(){
+	$('#click-menu').click(function(){
+		$(this).toggleClass('active'); // adds/removes class to menu icon
+	});
+});
+		</script>
+	</head>
+	<body>
+		<div id="click-menu">
+			<div class="twoLines">
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+		</div>
+	</body>
+</html>

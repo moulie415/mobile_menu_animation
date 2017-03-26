@@ -1,0 +1,45 @@
+#click-menu {
+	cursor: pointer;
+	position: absolute;
+}
+
+body #click-menu .twoLines .line {
+	position: relative !important;
+	display: block !important;
+	width: 22px !important;
+	height: 2px !important;
+	background-color: black !important;
+
+	/*dictates gap between the two bars*/
+	margin-bottom: 5px !important;
+
+	border-radius: 1px !important;
+	vertical-align: middle !important;
+	line-height: 1px !important;
+	transition: all 1.2s cubic-bezier(.72,.01,.29,.99), margin-top 0.3s linear 0.7s !important;
+
+}
+body #click-menu img, body #click-menu .twoLines {
+	width: auto !important;
+	height: auto !important;
+}
+
+#click-menu.active {
+	position: fixed;
+}
+/*different properties for top and bottom bar*/
+#click-menu.active .line:first-of-type {
+	transition: all 1.2s cubic-bezier(.72,.01,.29,.99), margin-top 0.3s linear;
+	transform: rotate(225deg);
+
+	/* this to make sure that the X is aligned well. may need tweaking if the bars are made bigger*/
+	margin-top: 5px;
+}
+
+#click-menu.active .line:nth-child(2) {
+	transition: all 1.2s cubic-bezier(.72,.01,.29,.99), margin-top 0.3s linear;
+	transform: rotate(315deg);
+
+	/* this to make sure that the X is aligned well. may need tweaking if the bars are made bigger*/
+	margin-top: -7px;
+}
